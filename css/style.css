@@ -1,0 +1,73 @@
+:root {
+    --background-color: rgb(90, 219, 248);
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --link-color: rgb(196, 16, 205);
+  }
+  
+  body {
+    font-optical-sizing: auto;
+    font-family: "Monserat", monospace;
+    font-style: normal;
+    background-color: var(--background-color);
+    margin: 0 1em;
+    font-size: 16px;
+  }
+
+  main {
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  #head {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sub-head {
+    margin-left: auto;
+    order: 2;
+  }
+  
+  #head h3 a {
+    color: var(--dark-color);
+    text-decoration: none;
+  }
+
+  h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 100;
+    font-size: 3em;
+  }
+
+  p {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .post {
+    border:1px solid var(--dark-color);
+    margin-bottom: 1em;
+    padding: .5em 1em;
+  }
+
+  /*these styles are shown between .post and #post */
+  .post, #post {
+    .img container {
+        aspect-ratio: 3/2 ;
+    }
+    img {
+        width: 40%;
+        height: auto;
+        display: block;
+    }
+    a{
+        color: var(--link-color);
+        background-color: var(--light-color);
+        text-decoration: none;
+    }
+    a.hover {
+        text-decoration: underline;
+    }
+  }
