@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>CSS Exercise 4: CSS Grid</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+
+        <main>
+
+            <div id="head">
+                <div><h3><a href="index.html">DES 070 Labs</a></h3></div>
+                <div class="sub-head"><h3>CSS Exercise 4: CSS Grid</h3></div>
+            </div>
+            
+            <!-- CSS Grid  -->
+
+            <div class="post">
+
+                <h2>CSS Grid</h2>
+                <p>Out of all of the layout modes in CSS, Grid is the most sophisticated. It is useful for creating layouts that fluidly adapt based on a number of constraints. Grid can be daunting, but if you think in terms of what you want to do in any design scenario you will be able to get it to work.</p>
+                <p><em><strong>It does take some time to become comfortable with CSS Grid.</strong></em></p>
+                <p>Grid works in two dimensions: rows and columns, and is defined purely in CSS</p>
+    
+                <h3>Grid Flow</h3>
+    
+                <p>Grid layout with the display property</p>
+                <p>Specify columns using the grid-template-columns property:</p>
+    
+                <div class="grid-parent">
+                    <div class="grid-child">1</div>
+                    <div class="grid-child">2</div>
+                </div>
+    
+                <p>Column widths can be set with any unit (px, rem, %), but there is a fr unit available within grid that us super useful. FR: fraction.</p>
+                <p>fractional units are relative to the width of the parent.</p>
+                <p>fractional units are more flexible than percentage: the column won't shrink below its minimum content size, even if that means breaking the proportions.</p>
+    
+                <h3>Implicit Layout</h3>
+                <p>More than two children:</p>
+                <div class="grid-parent">
+                    <div class="grid-child">1</div>
+                    <div class="grid-child">2</div>
+                    <div class="grid-child">3</div>
+                    <div class="grid-child">4</div>
+                </div>
+    
+                <p>The grid algorithm creates new rows as-needed to ensure that every child has its own grid cell</p>
+                <p>Useful, for example, in creating a grid of photos where you don't know how many cells you need.</p>
+    
+                <h3>Explicit Layout</h3>
+    
+                <p>Sometimes, like in template structure, you want to define each cell explicitly. For this, use the grid-template-rows property.</p>
+    
+                <div class="grid-layout-parent">
+                    <div class="grid-child">1</div>
+                    <div class="grid-child">2</div>
+                    <div class="grid-child">3</div>
+                    <div class="grid-child">4</div>
+                </div>
+
+                <h3>Grid Repeat Helper</h3>
+                <p>Imagine you want to create a chess board:. We can structure it as a 8-column grid, with each column consuming 1 unit of space</p>
+                
+                <div class="grid-layout-chess">
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>
+                    <div class="grid-child-chess"></div>    
+                </div>
+    
+                <h3>Assigning Children</h3>
+    
+                <p>By default, the CSS Grid algorithm will assign each child to the first unoccupied grid cell, like tiles in a floor.</p>
+                <p>However: we can assign our items. Children can even span across multiple rows/columns:</p>
+    
+                <div class="grid-assign-parent">
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-special-child"></div>
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-child"></div>
+                    <div class="grid-assign-child"></div>
+                </div>
+
+            
+    
+            </div>
+
+        </main>
+
+    </body>
+
+</html>

@@ -71,3 +71,308 @@
         text-decoration: underline;
     }
   }
+
+  /*Lab 2 Styles */
+
+  .logo-holder{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--body-color);
+    font-weight: bold;
+  }
+
+  #logo {
+    height: 3em;
+    width: auto;
+    float: left;
+    margin-right: .5em;
+  }
+
+  .sub-head {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Lab 3 Styles */
+
+  .hide-me{
+    display: none;
+  }
+
+  .post span{
+    color: chocolate;
+  }
+
+  .block-div, .block{
+    display: block;
+    border-radius: 1em;
+    color: black;
+    background-color: rgb(166, 255, 0);
+    border: 1px solid var(--dark-color);
+    padding: 1em;
+  }
+
+  .inline{
+    display: inline;
+  }
+
+  .inline-block{
+    display: inline;
+    text-transform: uppercase;
+    padding: 0.2em 0.8em;
+    color: var(--dark-color) !important;
+    background-color: rgb(179, 116, 238);
+    transform: rotate(-8deg);
+    font-weight: 800;
+    font-variation-settings: "width";
+  }
+
+  .static{
+    position: static;
+    border: 1px solid var(--dark-color);
+  }
+
+  .fixed {
+    z-index: 999;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    width: 200px;
+    padding: 1em;
+    background-color: darkmagenta;
+    border: 1px solid var(--dark-color);
+  }
+
+  .relative {
+    position: relative;
+    left: 1em;
+    width: calc(100% - 1em);
+    border: 1px solid var(--dark-color);
+  }
+
+
+  .absolute-demo-holder{
+    position: relative;
+    border: 1px solid var(--dark-color);
+    width: 100%;
+    margin-bottom: 1em;
+    aspect-ratio: 4/3;
+  }
+
+  .absolute-bubble{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+    border-radius: 50px;
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+  }
+
+  .sticky-demo-holder {
+    overflow: scroll;
+    position: relative;
+    border: 1px solid var(--dark-color);
+    width: 100%;
+    margin-bottom: 1em;
+    height: 200px;
+    p {
+      margin: 1em;
+    }
+  }
+
+  .sticky-bit {
+    background-color: coral;
+    position: sticky;
+    top: 0;
+    padding: 1em;
+  }
+  
+  .float-demo-holder {
+    border: 1px solid var(--dark-color);
+    padding: 0 1em;
+    margin-bottom: 1em;
+  
+    .img-right {
+      width: 15em;
+      height: auto;
+      float: right;
+      margin: 1em 0 1em 1em;
+    }
+    
+    .img-left {
+      width: 15em;
+      height: auto;
+      float: left;
+      margin: 1em 1em 1em 0;
+    }
+  
+  }
+
+  .column-demo-holder {
+    border: 1px solid var(--dark-color);
+    padding: 1em;
+    margin-bottom: 1em;
+    overflow: hidden;
+  
+    .column {
+      width: calc(100%/3 - 2rem);
+      aspect-ratio: 1;
+      float: left;
+      padding: 1rem;
+      font-size: 2em;
+      font-weight: 100;
+      font-style: italic;
+      background-color: hsl(16, 100%, 66%);
+      &:nth-child(even){
+        background-color: hsl(16, 100%, 44%);
+      }
+    }
+  
+    .masthead {
+      background-color: #600060;
+      margin: 1em;
+      height: 100px;
+    }
+  
+    .side-nav {
+      background-color: #006060;
+      float: left;
+      margin: 1em;
+      height: 60vh;
+      width: calc(25% - 2em);
+    }
+  
+    .article {
+      background-color: #606000;
+      float: left;
+      margin: 1em;
+      height: 60vh;
+      width: calc(75% - 2em);
+    }
+  }
+
+  /*CSS Lab 4: Grid */
+
+  .grid-parent{
+    display: grid;
+    /*grid-template-collumns: 25% 75%;*/
+    grid-template-columns: 1fr 3fr;
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+
+  .grid-child {
+    min-height: 1em;
+    background-color: blueviolet;
+  }
+
+  .grid-layout-parent {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 5fr;
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+
+  .grid-child-chess {
+    aspect-ratio: 1;
+    background-color: coral;
+    transition: 0.5s;
+  }
+
+  .grid-child-chess:nth-child(-n + 8):nth-child(even),
+  .grid-child-chess:nth-child(n + 8):nth-child(-n + 16):nth-child(odd),
+  .grid-child-chess:nth-child(n + 17):nth-child(-n + 24):nth-child(even),
+  .grid-child-chess:nth-child(n + 25):nth-child(-n + 32):nth-child(odd),
+  .grid-child-chess:nth-child(n + 33):nth-child(-n + 40):nth-child(even),
+  .grid-child-chess:nth-child(n + 41):nth-child(-n + 48):nth-child(odd),
+  .grid-child-chess:nth-child(n + 49):nth-child(-n + 56):nth-child(even),
+  .grid-child-chess:nth-child(n + 57):nth-child(-n + 64):nth-child(odd) {
+      background-color: hsl(16, 100%, 44%)
+  }
+
+  .grid-child-chess:hover {
+    background-color: black !important;
+  }
+
+  .grid-assign-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+  .grid-assign-child {
+    min-height: 1em;
+    background-color: #d6d6d6;
+  }
+  
+  .grid-assign-special-child {
+    grid-row: 2 / 4; /*start at row 2 and go to row 4 */
+    grid-column: 2 / 4; /*start at column 2 and go to column 4 */
+    background-color: coral;
+  }
+
+  .grid-area-parent {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: 1em;
+    margin-bottom: 1em;
+    grid-template-areas:
+      'sidebar header'
+      'sidebar main';
+      /* notice how it looks like the grid, visually */
+  }
+
+  body{
+    margin:0
+  
+  }
+
+  .nav{
+    background-color: #600060;
+    justify-content: space-between;
+    font-size: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display:flex
+    /*flex direaction row */
+    
+  }
+
+  .container{
+    display: flex;
+    background-color: #3b87d8;
+    justify-content: flex-start;
+    height: 50vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+
+  }
+
+  .landingText{
+    display: flex;
+    flex-direction:column ;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .blossomImgLanding{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+  }
+
+  .blossomimg{
+    width: 300px;
+    height: 300px;
+    padding-left: 70%;
+    padding-top: 7%;
+  }
